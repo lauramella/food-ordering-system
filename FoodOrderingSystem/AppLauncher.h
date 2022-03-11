@@ -15,5 +15,12 @@ public:
 	AppLauncher();
 	void Run();
 	~AppLauncher();
+
+private:
+	void PrintGeneralAppInfo();
+	void PrintMenu();
+	void PrintMainQuestions();
+	int GetIntAnswer();
+	string GetStringAnswer();
 };
 
