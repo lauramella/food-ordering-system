@@ -11,7 +11,7 @@ AppLauncher::AppLauncher()
 	items = new Item[150];
 	choices = new Item[10]{ *new Item(1, "Margharita", 13.90), *new Item(2, "Funghi", 14.90), *new Item(3, "Quattro Formaggi", 15.90), *new Item(4, "Chevre-Aubergine", 15.90), *new Item(5, "Vegan", 16.90),
 		*new Item(6, "Coca-cola", 2.50) ,*new Item(7, "Coca-cola zero", 2.50) ,*new Item(8, "Fanta", 2.50) ,*new Item(9, "Sprite", 2.50) ,*new Item(10, "Vichy", 2.50) };
-	itAmount = 100;
+	itAmount = 150;
 	line = "_________________________________________________________";
 }
 
@@ -29,10 +29,10 @@ void AppLauncher::Run()
 			PrintMenu();
 			break;
 		case 2:
-			OrderMenu();
+			GetOrderMenu();
 			break;
 		case 3:
-			ReviewYourOrder();
+			ReviewTheOrder();
 			break;
 		case 4:
 			for (int i = 0; i < itAmount;i++)
@@ -99,7 +99,7 @@ void AppLauncher::PrintMenu()
 	cout << "10. Vichy" << endl;
 }
 
-void AppLauncher::OrderMenu()
+void AppLauncher::GetOrderMenu()
 {
 	cout << line << endl;
 	cout << "\nChoose number you would like to add to your order    (Press 0 to go back)" << endl;
@@ -129,7 +129,7 @@ void AppLauncher::OrderMenu()
 			orderMore = GetStringAnswer();
 			if (orderMore == "y")
 			{
-				OrderMenu();
+				GetOrderMenu();
 			}
 		}
 		else
@@ -140,7 +140,7 @@ void AppLauncher::OrderMenu()
 	else if (retVal != 0)
 	{
 		cout << "You didn't give right number. Try again." << endl;
-		OrderMenu();
+		GetOrderMenu();
 	}
 }
 
@@ -159,7 +159,7 @@ bool AppLauncher::AddItem(int pRetVal)
 	return retVal;
 }
 
-void AppLauncher::ReviewYourOrder()
+void AppLauncher::ReviewTheOrder()
 {
 	PrintOrder();
 	cout << "\nChoose an option(1=edit your order, 2=delete your order 3=check out 4=menu)" << endl;
@@ -170,7 +170,7 @@ void AppLauncher::ReviewYourOrder()
 	case 1:
 		PrintOrder();
 		EditOrder();
-		ReviewYourOrder();
+		ReviewTheOrder();
 		break;
 	case 2:
 		DeleteOrder();
@@ -214,7 +214,7 @@ void AppLauncher::PrintOrder()
 	{
 		if (printList[i] > 0)
 		{
-			cout << choices[i].GetId() << ".  " << printList[i] << "kpl " << choices[i].GetName() << endl;
+			cout << choices[i].GetId() << ".  " << printList[i] << "pcs " << choices[i].GetName() << endl;
 			empty = false;
 		}
 	}
@@ -360,7 +360,6 @@ int AppLauncher::GetIntAnswer()
 	getline(cin, userInput);
 	try {
 		retVal = stoi(userInput);
-		cout << retVal << endl;
 	}
 	catch (invalid_argument const&) {
 		//cout << "Bad input: std::invalid_argument thrown" << endl;

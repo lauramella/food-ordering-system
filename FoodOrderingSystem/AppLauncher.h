@@ -5,8 +5,8 @@
 class AppLauncher
 {
 private:
-	bool notQuitting = true;
-	Item* items;  //Pointer to an Equipment type object/array
+	bool notQuitting;
+	Item* items; 
 	Item* choices;
 	int itAmount;
 	string line;
@@ -21,9 +21,9 @@ private:
 	void PrintGeneralAppInfo();
 	void PrintMenu();
 	void PrintMainQuestions();
-	void OrderMenu();
+	void GetOrderMenu();
 	bool AddItem(int pRetVal);
-	void ReviewYourOrder();
+	void ReviewTheOrder();
 	void PrintOrder();
 	void EditOrder();
 	void DeleteOrder();
