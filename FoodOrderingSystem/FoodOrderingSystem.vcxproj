@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="AppLauncher.cpp" />
     <ClCompile Include="FoodOrderingSystem.cpp" />
+    <ClCompile Include="Item.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppLauncher.h" />
+    <ClInclude Include="Item.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
