@@ -103,11 +103,11 @@ void AppLauncher::OrderMenu()
 {
 	cout << line << endl;
 	cout << "\nChoose number you would like to add to your order    (Press 0 to go back)" << endl;
-	cout << "\n1. Margharita               13,90e    6. Coca-cola       2,95e" << endl;
-	cout << "2. Funghi                   14,90e    7. Coca-cola zero  2,95e" << endl;
-	cout << "3. Quattro Formaggi         15,90e    8. Fanta           2,95e" << endl;
-	cout << "4. Chevre - Aubergine       15,90e    9. Sprite          2,95e" << endl;
-	cout << "5. Vegan                    16,90e   10. Vichy           2,95e" << endl;
+	cout << "\n1. Margharita               13,90e    6. Coca-cola       2,50e" << endl;
+	cout << "2. Funghi                   14,90e    7. Coca-cola zero  2,50e" << endl;
+	cout << "3. Quattro Formaggi         15,90e    8. Fanta           2,50e" << endl;
+	cout << "4. Chevre - Aubergine       15,90e    9. Sprite          2,50e" << endl;
+	cout << "5. Vegan                    16,90e   10. Vichy           2,50e" << endl;
 	cout << "> ";
 	int retVal = GetIntAnswer();
 	bool itemAdded = false;
@@ -222,11 +222,11 @@ void AppLauncher::PrintOrder()
 	{
 		if (fmod(price, 1) == 0)
 		{
-			cout << "\nTotal price: " << price << "0e" << endl;
+			cout << "\nTotal price: " << price << ".00e" << endl;
 		}
 		else
 		{
-			cout << "\nTotal price: " << price << ".00e" << endl;
+			cout << "\nTotal price: " << price << "0e" << endl;
 		}
 	}
 	else
