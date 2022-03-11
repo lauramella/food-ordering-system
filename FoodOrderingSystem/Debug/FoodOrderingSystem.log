@@ -1,4 +1,5 @@
 ﻿  AppLauncher.cpp
+  Customer.cpp
   FoodOrderingSystem.cpp
   Generating Code...
   FoodOrderingSystem.vcxproj -> C:\cpp\food-ordering-system\FoodOrderingSystem\Debug\FoodOrderingSystem.exe

@@ -1,5 +1,6 @@
 #pragma once
 #include "Item.h"
+#include "Customer.h"
 
 class AppLauncher
 {
@@ -20,6 +21,16 @@ private:
 	void PrintGeneralAppInfo();
 	void PrintMenu();
 	void PrintMainQuestions();
+	void OrderMenu();
+	bool AddItem(int pRetVal);
+	void ReviewYourOrder();
+	void PrintOrder();
+	void EditOrder();
+	void DeleteOrder();
+	void Checkout();
+	void GetCustomerData();
+	void FinalChoice();
+	void QuitProgram();
 	int GetIntAnswer();
 	string GetStringAnswer();
 };
