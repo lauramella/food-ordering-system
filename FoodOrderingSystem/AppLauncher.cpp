@@ -71,7 +71,7 @@ void AppLauncher::PrintMainQuestions()
 	cout << "\n1) Print the menu" << endl;
 	cout << "2) Place an order" << endl;
 	cout << "3) Review your order" << endl;
-	cout << "4) Check out" << endl;
+	cout << "4) Checkout" << endl;
 	cout << "5) Exit" << endl;
 	cout << "> ";
 }
@@ -162,7 +162,7 @@ bool AppLauncher::AddItem(int pRetVal)
 void AppLauncher::ReviewTheOrder()
 {
 	PrintOrder();
-	cout << "\nChoose an option(1=edit your order, 2=delete your order 3=check out 4=menu)" << endl;
+	cout << "\nChoose an option(1=edit your order, 2=delete your order 3=checkout 4=menu)" << endl;
 	cout << "> ";
 	int retVal = GetIntAnswer();
 	switch (retVal)
